@@ -9,4 +9,6 @@ class ColorsApp
   static const borderColor=Color(0xffDBDBDB);
   static const blackColor=Color(0xff0D0D0D);
   static const isPressedColor=Color(0xffF2A285);
+  static const datePickerColor=Color(0xffF2A285);
+
 }

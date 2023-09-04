@@ -2,7 +2,7 @@
 
 
 import 'package:exibition/Core/Utils/colors.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_user_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_user_interest.dart';
 import 'package:flutter/material.dart';
 
 class ThirdRowInterests extends StatefulWidget {

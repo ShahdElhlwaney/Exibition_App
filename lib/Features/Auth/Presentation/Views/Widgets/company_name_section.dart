@@ -2,12 +2,13 @@
 
 
 import 'package:exibition/Core/Utils/styles.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/text_field_without_suffix_icon.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/company_text_field.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/text_field_without_suffix_icon.dart';
 import 'package:flutter/material.dart';
 
 class CompanyNameSection extends StatelessWidget {
-  const CompanyNameSection({Key? key}) : super(key: key);
-
+  const CompanyNameSection({Key? key, required this.controller}) : super(key: key);
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,8 +20,9 @@ class CompanyNameSection extends StatelessWidget {
         SizedBox(height: 8,),
         SizedBox(
           width: MediaQuery.of(context).size.width,
-          child: TextFieldWithoutSuffixIcon
-            (onChanged: (String text) {  }, validator: (String?t ) {  },),
+          child: CompanyTextField
+            (onChanged: (String text) {  }, validator: (String?t ) {  }
+            , controller: controller,),
         ),
       ],
     );

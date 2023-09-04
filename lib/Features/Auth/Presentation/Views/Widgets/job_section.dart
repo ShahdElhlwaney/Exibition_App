@@ -3,11 +3,13 @@
 
 
 import 'package:exibition/Core/Utils/styles.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/text_field_without_suffix_icon.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/job_text_field.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/text_field_without_suffix_icon.dart';
 import 'package:flutter/material.dart';
 
 class JobSection extends StatelessWidget {
-  const JobSection({Key? key}) : super(key: key);
+  const JobSection({Key? key, required this.controller}) : super(key: key);
+ final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,9 @@ class JobSection extends StatelessWidget {
         const SizedBox(height: 8,),
         SizedBox(
           width: MediaQuery.of(context).size.width,
-          child: TextFieldWithoutSuffixIcon
-            (onChanged: (String text) {  }, validator: (String? t) {  },),
+          child: JobTextField
+            (onChanged: (String text) {  }, validator: (String? t) {  }
+            , controller: controller,),
         ),
       ],
     );

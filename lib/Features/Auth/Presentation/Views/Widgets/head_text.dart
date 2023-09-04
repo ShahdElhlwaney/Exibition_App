@@ -4,6 +4,7 @@
 
 import 'package:exibition/Core/Utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HeadText extends StatelessWidget {
   const HeadText({Key? key, required this.text}) : super(key: key);
@@ -12,7 +13,11 @@ class HeadText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.arrow_back_ios_new),
+        GestureDetector(
+          onTap: (){
+            GoRouter.of(context).pop();
+          },
+            child: Icon(Icons.arrow_back_ios_new)),
         SizedBox(width: 8,),
 
         Text(text,style: Styles.textStyle18,),

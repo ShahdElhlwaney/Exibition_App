@@ -2,16 +2,16 @@ import 'package:exibition/Core/Utils/app_router.dart';
 import 'package:exibition/Core/Utils/colors.dart';
 import 'package:exibition/Core/Utils/styles.dart';
 import 'package:exibition/Features/OnBoarding/Presentation/Views/Widgets/get_started_button.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_first_interest.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_fourth_interest.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_second_interest.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_third_interest.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/first_row_interests.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/fourth_row_interests.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/head_text.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/person_head_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/second_row_interests.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/third_row_interests.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_first_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_fourth_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_second_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_third_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/first_row_interests.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/fourth_row_interests.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/head_text.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/person_head_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/second_row_interests.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/third_row_interests.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 class InterestsUserViewBody extends StatefulWidget {
@@ -27,7 +27,7 @@ class _InterestsUserViewBodyState extends State<InterestsUserViewBody> {
   Widget build(BuildContext context) {
     return  SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(24),
+        padding: EdgeInsets.only(left: 24,top: 24),
   child:Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -1,7 +1,7 @@
 
 
 
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/thanks_view_body.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/thanks_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ThanksView extends StatelessWidget {
@@ -9,7 +9,7 @@ class ThanksView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  const Scaffold(
       body: ThanksViewBody(),
     );
   }

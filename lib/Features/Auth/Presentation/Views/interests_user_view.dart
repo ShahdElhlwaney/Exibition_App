@@ -2,7 +2,7 @@
 
 
 
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/interests_user_view_body.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/interests_user_view_body.dart';
 import 'package:flutter/material.dart';
 
 class InterestsUserView extends StatelessWidget {

@@ -1,6 +1,6 @@
 
 
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/create_account_view_body.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/create_account_view_body.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccountView extends StatelessWidget {

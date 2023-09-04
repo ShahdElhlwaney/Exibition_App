@@ -1,5 +1,5 @@
 import 'package:exibition/Core/Utils/colors.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_user_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_user_interest.dart';
 import 'package:flutter/material.dart';
 
 class SecondRowInterests extends StatefulWidget {
@@ -15,7 +15,7 @@ class _SecondRowInterestsState extends State<SecondRowInterests> {
     return Row(
       children: [
         CustomUserInteresrt(
-          width: MediaQuery.of(context).size.width*.55
+          width: MediaQuery.of(context).size.width*.51
           , text: 'Payment Processors', onChanged: () {
           setState(() {
             isPressed1=!isPressed1;

@@ -1,12 +1,14 @@
 
 
+import 'package:exibition/Core/Utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class Styles{
   static const textStyle18=TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w600 ///semiBold
+      fontSize: 18,
+      fontWeight: FontWeight.w600 ,///semiBold
+      color: ColorsApp.blackColor
   );
 
   static const textStyle11=TextStyle(
@@ -39,6 +41,6 @@ abstract class Styles{
   static const textStyle15=TextStyle(
       fontSize: 15,
       fontWeight: FontWeight.w400,
-      color:  Colors.white
+      color:  ColorsApp.mainColor
   );
 }

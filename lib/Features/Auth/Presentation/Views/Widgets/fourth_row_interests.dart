@@ -3,7 +3,7 @@
 
 
 import 'package:exibition/Core/Utils/colors.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_user_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_user_interest.dart';
 import 'package:flutter/material.dart';
 
 class FourthRowInterests extends StatefulWidget {
@@ -32,16 +32,18 @@ class _FourthRowInterestsState extends State<FourthRowInterests> {
           , borderColor: isPressed1?Colors.transparent:ColorsApp.borderColor
           , icon: isPressed1?Icons.check:Icons.add,),
         SizedBox(width: 16,),
-        CustomUserInteresrt(
-          width: MediaQuery.of(context).size.width*.38
-          , text: 'Payments', onChanged: () {
-          setState(() {
-            isPressed2=!isPressed2;
-          });
-        },
-          color: isPressed2?ColorsApp.isPressedColor:Colors.white
-          , borderColor: isPressed2?Colors.transparent:ColorsApp.borderColor
-          , icon: isPressed2?Icons.check:Icons.add,
+        Expanded(
+          child: CustomUserInteresrt(
+            width: MediaQuery.of(context).size.width*.38
+            , text: 'Payments', onChanged: () {
+            setState(() {
+              isPressed2=!isPressed2;
+            });
+          },
+            color: isPressed2?ColorsApp.isPressedColor:Colors.white
+            , borderColor: isPressed2?Colors.transparent:ColorsApp.borderColor
+            , icon: isPressed2?Icons.check:Icons.add,
+          ),
         )
       ],
     );

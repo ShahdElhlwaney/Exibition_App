@@ -2,7 +2,7 @@
 
 
 import 'package:exibition/Core/Utils/colors.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_user_interest.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/custom_user_interest.dart';
 import 'package:flutter/material.dart';
 
 class FirstRowIntersts extends StatefulWidget {
@@ -32,7 +32,7 @@ class _FirstRowInterstsState extends State<FirstRowIntersts> {
         ),
         const SizedBox(width: 16,),
         CustomUserInteresrt(
-          width: MediaQuery.of(context).size.width*.25
+          width: MediaQuery.of(context).size.width*.23
           , text: 'NFC', onChanged: () {
           setState(() {
             isPressed2=!isPressed2;

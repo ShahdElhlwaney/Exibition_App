@@ -1,10 +1,8 @@
 
 
 
-import 'package:exibition/Core/Utils/colors.dart';
 import 'package:exibition/Core/Utils/styles.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/custom_check_box.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/text_field_with_suffix_icon.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/text_field_with_suffix_icon.dart';
 import 'package:flutter/material.dart';
 
 class PasswordSubSection extends StatefulWidget {
@@ -19,6 +17,7 @@ class _PasswordSubSectionState extends State<PasswordSubSection> {
 GlobalKey<FormState>formKey=GlobalKey();
   @override
   Widget build(BuildContext context) {
+    TextEditingController controller =TextEditingController();
     String? password;
     return Form(
       key: formKey,
@@ -51,7 +50,7 @@ GlobalKey<FormState>formKey=GlobalKey();
       return "Password should not be greater than 15 characters";
       }
 
-      },
+      }, controller: controller,
       ),
 
       ]

@@ -1,14 +1,14 @@
 
 
 import 'package:exibition/Core/Utils/styles.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/company_name_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/country_name_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/email_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/job_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/name_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/password_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/phone_number_section.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/text_field_with_suffix_icon.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/company_name_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/country_name_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/email_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/job_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/name_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/password_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/phone_number_section.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/text_field_with_suffix_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -17,33 +17,35 @@ class PersonInformationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController=TextEditingController();
+    TextEditingController passController=TextEditingController();
+    TextEditingController firstNameController=TextEditingController();
+    TextEditingController lastNameController=TextEditingController();
+    TextEditingController phoneController=TextEditingController();
+    TextEditingController confirmController=TextEditingController();
+    TextEditingController salutationController=TextEditingController();
+    TextEditingController companyController=TextEditingController();
+
+
     GlobalKey<FormState> formKey = GlobalKey();
 
     return    Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Salutation',style: Styles.textStyle16.copyWith(
-            color: Colors.black
-        ),),
-        const SizedBox(height: 8,),
-        TextFieldWithSuffix(
-          onChanged: (String ) {  }, icon:
-        const Icon(FontAwesomeIcons.angleDown), obscureText: false, onTap: () {  }
-           ,validator: (String?value ) {
 
-          },),
         const SizedBox(height: 24,),
-        const NameSection(),
+         NameSection(firstNameController: firstNameController
+           , lastNameController: lastNameController,),
         const SizedBox(height: 24,),
-        const EmailSection(),
+         EmailSection(controller: emailController,),
         const SizedBox(height: 24,),
-        const PasswordSection(),
+         PasswordSection(controller: passController, confirmController: confirmController,),
         const SizedBox(height: 24,),
-        const JobSection(),
+         JobSection(controller: salutationController,),
         const SizedBox(height: 24,),
-        const CompanyNameSection(),
+         CompanyNameSection(controller: companyController,),
         const SizedBox(height: 24,),
-        const PhoneNumberSection(),
+         PhoneNumberSection(onChanged: (String t) {  }, controller: phoneController,),
         const SizedBox(height: 24,),
         const CountryNameSection()
       ],

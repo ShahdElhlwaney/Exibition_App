@@ -2,15 +2,15 @@
 
 
 import 'package:exibition/Core/Utils/styles.dart';
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/text_field_without_suffix_icon.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/email_text_field.dart';
 import 'package:flutter/material.dart';
 
 class EmailSection extends StatelessWidget {
-  const EmailSection({Key? key}) : super(key: key);
-
+  const EmailSection({Key? key, required this.controller,  this.hintText=''}) : super(key: key);
+  final TextEditingController controller;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
-    String email;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,10 +21,9 @@ class EmailSection extends StatelessWidget {
         SizedBox(height: 8,),
         SizedBox(
           width: MediaQuery.of(context).size.width,
-          child: TextFieldWithoutSuffixIcon
+          child: EmailTextField
             (
             onChanged: (String text ) {
-              email=text;
             }
             , validator: (value ) {
             if (value!.isEmpty) {
@@ -33,7 +32,8 @@ class EmailSection extends StatelessWidget {
             else if (!value.contains('@')) {
               return "email should have '@'";
             }
-          },
+          }, controller: controller,
+            hintText: hintText,
           ),
         ),
       ],

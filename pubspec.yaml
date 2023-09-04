@@ -21,8 +21,14 @@ dependencies:
   font_awesome_flutter:
   google_fonts:
   smooth_page_indicator:
-  bloc:
+  flutter_bloc:
   image_picker:
+  persistent_bottom_nav_bar: any
+  #date_picker_timeline: ^1.2.5
+  calendar_timeline:
+  flutter_localization:
+  qr_flutter:
+  rflutter_alert:
   flutter:
     sdk: flutter
 
@@ -62,6 +68,10 @@ flutter:
     - Images/logo.png
     - Images/camera.png
     - Images/profile_test.png
+    - Images/home_icon.png
+    - Images/setting_icon.png
+    - Images/qr_icon.png
+    - Images/camera_profile.png
     #- Images/icon_app.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

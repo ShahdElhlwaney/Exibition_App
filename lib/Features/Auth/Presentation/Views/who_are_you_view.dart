@@ -1,6 +1,6 @@
 
 
-import 'package:exibition/Features/Person/Presentation/Views/Widgets/who_are_you_view_body.dart';
+import 'package:exibition/Features/Auth/Presentation/Views/Widgets/who_are_you_view_body.dart';
 import 'package:flutter/material.dart';
 
 class WhoAreYouView extends StatelessWidget {
